@@ -1,0 +1,305 @@
+[
+    {
+        "title": "Spicy Chicken Curry",
+        "image": "https://i.ibb.co/wrsQQhb/download.jpg",
+        "rating": 4.5,
+        "price": 12.99,
+        "category": "dinner",
+        "description": "Experience the rich and bold flavors of our Spicy Chicken Curry, made with tender chicken simmered in a robust blend of spices, coconut milk, and aromatic herbs. Perfectly served with a side of steamed rice or warm naan bread, this dish is sure to ignite your taste buds with every bite. Ideal for those who love a bit of heat in their meals, this curry offers a delightful balance of spice and savory goodness.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "chicken",
+            "spices",
+            "coconut milk",
+            "herbs"
+        ],
+        "postTime": "2024-06-01T12:00:00Z",
+        "likes": 0,
+        "reviews": [
+
+        ]
+    },
+    {
+        "title": "Plane rice with chicken",
+        "image": "https://i.ibb.co/frSphFv/images-5.jpg",
+        "rating": 4.2,
+        "price": 8.50,
+        "category": "lunch",
+        "description": "Our Plane Rice with Chicken is a wholesome and satisfying meal that combines fluffy, fragrant rice with tender, marinated chicken pieces. This simple yet delicious dish is seasoned with light herbs and spices, making it a perfect choice for a quick lunch. Enjoy the balance of protein and carbs, providing the energy you need to power through your day.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "rice",
+            "chicken",
+            "herbs",
+            "spices"
+        ],
+        "postTime": "2024-05-25T11:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Penne Arrabbiata",
+        "image": "https://i.ibb.co/Ks9RVy9/images.jpg",
+        "rating": 4.8,
+        "price": 10.75,
+        "category": "dinner",
+        "description": "Indulge in our Penne Arrabbiata, a classic Italian pasta dish featuring penne tossed in a spicy tomato sauce. Made with ripe tomatoes, garlic, red chili flakes, and fresh basil, this dish is both flavorful and aromatic. Perfect for dinner, it pairs wonderfully with a glass of red wine or a crisp salad on the side.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "penne pasta",
+            "tomatoes",
+            "garlic",
+            "red chili flakes",
+            "basil"
+        ],
+        "postTime": "2024-05-20T18:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Pancakes",
+        "image": "https://i.ibb.co/FhMbWsn/cinnamon-honey-pancakes-8-1.jpg",
+        "rating": 4.7,
+        "price": 6.99,
+        "category": "breakfast",
+        "description": "Start your day with our fluffy Pancakes, served with a generous drizzle of honey and a sprinkle of fresh berries. These pancakes are light, airy, and deliciously sweet, making them the perfect breakfast treat. Enjoy them with a cup of coffee or a glass of fresh orange juice for a complete morning meal.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "flour",
+            "milk",
+            "eggs",
+            "honey",
+            "berries"
+        ],
+        "postTime": "2024-06-03T08:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Grilled Chicken Salad",
+        "image": "https://i.ibb.co/sC55kC6/grilled-chicken-salad-4.jpg",
+        "rating": 4.3,
+        "price": 9.50,
+        "category": "lunch",
+        "description": "Our Grilled Chicken Salad is a healthy and refreshing choice for lunch, featuring perfectly grilled chicken breast atop a bed of crisp mixed greens. Tossed with cherry tomatoes, cucumber, red onions, and a light vinaigrette, this salad is both nutritious and delicious. It's a great way to enjoy a balanced meal that's full of flavor and low in calories.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "chicken breast",
+            "mixed greens",
+            "cherry tomatoes",
+            "cucumber",
+            "red onions",
+            "vinaigrette"
+        ],
+        "postTime": "2024-05-30T13:00:00Z",
+        "likes": 0,
+        "reviews": [
+
+        ]
+    },
+    {
+        "title": "Stir-Fried Vegetables with Tofu",
+        "image": "https://i.ibb.co/pR4zKhr/Tofu-Stir-Fry-8.jpg",
+        "rating": 4.9,
+        "price": 11.25,
+        "category": "dinner",
+        "description": "Enjoy a nutritious and flavorful dinner with our Stir-Fried Vegetables with Tofu. This dish combines a medley of fresh vegetables, including bell peppers, broccoli, and carrots, stir-fried to perfection with firm tofu. Seasoned with a savory soy-based sauce, it's a delightful blend of textures and tastes that will satisfy both your taste buds and your dietary needs.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "tofu",
+            "bell peppers",
+            "broccoli",
+            "carrots",
+            "soy sauce"
+        ],
+        "postTime": "2024-06-02T19:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Oatmeal with Nuts and Honey",
+        "image": "https://i.ibb.co/cwHgK3S/honey-oatmeal-recipe-1.jpg",
+        "rating": 4.1,
+        "price": 4.50,
+        "category": "breakfast",
+        "description": "Our Oatmeal with Nuts and Honey is a hearty and healthy breakfast option. Made with whole grain oats, this warm and comforting bowl is topped with a variety of nuts and a drizzle of honey. It provides a perfect balance of fiber, protein, and natural sweetness to keep you full and energized throughout the morning.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "oats",
+            "nuts",
+            "honey"
+        ],
+        "postTime": "2024-06-05T07:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Beef Taco Bowl",
+        "image": "https://i.ibb.co/3Cf3d3y/taco.jpg",
+        "rating": 4.4,
+        "price": 10.99,
+        "category": "lunch",
+        "description": "Our Beef Taco Bowl is a flavorful and filling lunch option, featuring seasoned ground beef served over a bed of rice, black beans, and fresh vegetables. Topped with salsa, cheese, and a dollop of sour cream, this bowl offers a delightful combination of textures and tastes. It's a convenient and delicious way to enjoy all the flavors of a taco in a bowl.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "beef",
+            "rice",
+            "black beans",
+            "vegetables",
+            "salsa",
+            "cheese",
+            "sour cream"
+        ],
+        "postTime": "2024-06-06T12:30:00",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Salmon with Roasted Vegetables",
+        "image": "https://i.ibb.co/FDBvV9Q/5544320-04f567e988ce416dadc24ba38716147d.jpg",
+        "rating": 4.6,
+        "price": 13.75,
+        "category": "dinner",
+        "description": "Treat yourself to our Salmon with Roasted Vegetables, a nutritious and delicious dinner choice. The salmon is perfectly cooked to retain its moist and flaky texture, while the assortment of roasted vegetables adds a delightful crunch and flavor. This dish is rich in omega-3 fatty acids and vitamins, making it as healthy as it is tasty.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "salmon",
+            "vegetables",
+            "olive oil",
+            "herbs"
+        ],
+        "postTime": "2024-05-28T18:30:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Fruit Yogurt Parfait",
+        "image": "https://i.ibb.co/hHZPFcz/download-2.jpg",
+        "rating": 4.2,
+        "price": 5.25,
+        "category": "breakfast",
+        "description": "Our Fruit Yogurt Parfait is a refreshing and healthy breakfast option, perfect for a quick start to your day. Layers of creamy yogurt, fresh fruits, and crunchy granola create a delightful mix of textures and flavors. This parfait is not only delicious but also packed with probiotics, vitamins, and fiber to keep you energized and satisfied.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "yogurt",
+            "fruits",
+            "granola"
+        ],
+        "postTime": "2024-06-04T08:30:00Z",
+        "likes": 0,
+        "reviews": [
+
+        ]
+    },
+    {
+        "title": "Black Bean Burger",
+        "image": "https://i.ibb.co/Lgb7njN/images-1.jpg",
+        "rating": 4.8,
+        "price": 8.99,
+        "category": "lunch",
+        "description": "Savor the taste of our Black Bean Burger, a hearty and flavorful vegetarian option. Made with a black bean patty, fresh lettuce, tomato, and a tangy sauce, this burger is both nutritious and satisfying. It's a great alternative to traditional burgers, offering a delicious way to enjoy a meat-free meal without compromising on taste.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "black beans",
+            "lettuce",
+            "tomato",
+            "bun",
+            "sauce"
+        ],
+        "postTime": "2024-06-01T13:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+            
+        ]
+    },
+    {
+        "title": "Chicken Biriyani",
+        "image": "https://i.ibb.co/mHLkn7c/images-2.jpg",
+        "rating": 4.5,
+        "price": 12.50,
+        "category": "dinner",
+        "description": "Our Chicken Biriyani is a fragrant and flavorful dish that features tender chicken pieces cooked with aromatic basmati rice and a blend of traditional spices. Garnished with fried onions and fresh cilantro, this dish is a feast for both the eyes and the palate. Perfect for dinner, it offers a rich and satisfying taste experience.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "chicken",
+            "basmati rice",
+            "spices",
+            "fried onions",
+            "cilantro"
+        ],
+        "postTime": "2024-05-22T19:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Scrambled Eggs with Toast",
+        "image": "https://i.ibb.co/DgT95bK/images-3.jpg",
+        "rating": 4.0,
+        "price": 5.75,
+        "category": "breakfast",
+        "description": "Enjoy a classic breakfast with our Scrambled Eggs with Toast. Fluffy scrambled eggs served with slices of toasted bread make for a simple yet delicious morning meal. This dish is quick to prepare and provides a good source of protein to start your day off right. Pair it with your favorite beverage for a complete breakfast.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "eggs",
+            "bread",
+            "butter"
+        ],
+        "postTime": "2024-06-07T07:30:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    },
+    {
+        "title": "Beef Biriyani",
+        "image": "https://i.ibb.co/VLShzHv/images-4.jpg",
+        "rating": 4.1,
+        "price": 9.25,
+        "category": "lunch",
+        "description": "Our Beef Biriyani is a rich and aromatic dish that combines tender beef with fragrant basmati rice and a blend of traditional spices. This hearty and satisfying meal is garnished with fresh herbs and served with a side of cooling yogurt sauce. Ideal for lunch, it offers a burst of flavors in every bite.",
+        "admin": "Khalid",
+        "email": "walid@khalid23.com",
+        "ingredients": [
+            "beef",
+            "basmati rice",
+            "spices",
+            "herbs",
+            "yogurt sauce"
+        ],
+        "postTime": "2024-05-29T12:00:00Z",
+        "likes": 0,
+        "reviews": [
+            
+        ]
+    }
+]
