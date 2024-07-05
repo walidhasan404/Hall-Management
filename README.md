@@ -1,71 +1,67 @@
-Live site: https://muktijoddha-hall.web.app
-
 # Hostel Management System Website
 
 Welcome to the Hostel Management System (HMS) website! This platform is designed to streamline hostel operations and enhance the living experience for both administrators and residents.
 
-## Admin Credentials
-- **Email:** walid@khalid23.com
-- **Password:** Abcder23#
+**Live Site**: [Hostel Management System](https://muktijoddha-hall.web.app)
 
-## Live Site URL
-https://muktijoddha-hall.web.app
+## Project Overview
+- The HMS website aims to manage hostel operations efficiently.
+- It helps in managing student details, room allocations, billing, maintenance, and communication.
+- Solves problems of manual management and provides a seamless experience for users.
 
 ## Features
-- **Student Management:**
-  - Register new students and manage their details.
-  - Assign students to rooms and update room allocations.
-  - Track student check-ins and check-outs.
+- **Student Management**: Register, manage, and track student details and room allocations.
+- **Billing and Payments**: Generate bills, accept online payments, and track payment status.
+- **Room Management**: Manage room availability, occupancy, and maintenance.
 
-- **Room Management:**
-  - Manage room inventory, including availability and occupancy status.
-  - Assign rooms based on preferences and availability.
-  - Generate reports on room occupancy and maintenance.
+## Technologies Used
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Payment Integration**: Stripe API
 
-- **Billing and Payments:**
-  - Generate bills for students including accommodation and additional charges.
-  - Accept online payments securely using integrated payment gateways.
-  - Track payment status and send automated reminders for overdue payments.
+## Installation Instructions
+### Prerequisites
+- Node.js and npm installed
+- MongoDB installed and running
 
-- **Maintenance and Facilities:**
-  - Manage maintenance requests and track their status.
-  - Update and maintain hostel facilities information.
-  - Schedule and track regular maintenance tasks.
+### Steps
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/hostel-management-system.git
+    cd hostel-management-system
+    ```
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+3. Configure environment variables:
+    - Create a `.env` file in the root directory.
+    - Add the following:
+        ```
+        PORT=5000
+        MONGO_URI=mongodb://localhost:27017/hostel
+        JWT_SECRET=your_jwt_secret
+        STRIPE_API_KEY=your_stripe_api_key
+        ```
 
-- **Communication:**
-  - Facilitate communication between hostel administration, staff, and students.
-  - Send notifications, announcements, and alerts via email or SMS.
+4. Start the backend server:
+    ```sh
+    npm start
+    ```
+5. Navigate to the frontend directory:
+    ```sh
+    cd frontend
+    npm install
+    ```
+6. Start the frontend development server:
+    ```sh
+    npm start
+    ```
 
-- **Security and Access Control:**
-  - Secure login for administrators with role-based access control.
-  - Monitor and manage access permissions for staff and residents.
+Open your web browser and navigate to `http://localhost:3000` to use the application.
 
-- **Reporting and Analytics:**
-  - Generate detailed reports on hostel occupancy, revenue, and expenses.
-  - Analyze trends and insights to optimize operations and resource allocation.
-
-- **Mobile Responsive Design:**
-  - Ensure seamless user experience across devices including smartphones, tablets, and desktops.
-  - Access critical functionalities on-the-go for administrators and staff.
-
-- **Integration and Scalability:**
-  - Integrate with existing school management systems or databases.
-  - Designed for scalability to accommodate growing hostel facilities and student populations.
-
-- **Support and Maintenance:**
-  - Ongoing support and updates to ensure smooth operation and security.
-  - Provide documentation and training resources for administrators and users.
-
-## Getting Started
-To deploy this system locally or on your server:
-1. Clone the repository from [GitHub](https://github.com/yourusername/hostel-management-system).
-2. Install dependencies using `npm install` or `yarn install`.
-3. Configure environment variables for database connection, Stripe API keys, etc.
-4. Run the application using `npm start` or `yarn start`.
-5. Access the application via `http://localhost:3000` (or configured port).
-
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+**Admin Credentials:**
+- **Email:** walid@khalid23.com
+- **Password:** Abcder23#
