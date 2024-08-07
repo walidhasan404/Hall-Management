@@ -25,7 +25,7 @@ const Category = () => {
     };
 
     return (
-        <div className="m-6">
+        <div className="lg:m-6 m-4">
             <div className="tabs tabs-boxed bg-blue-50 mb-4">
                 <button
                     className={`tab ${selectedCategory === 'all' ? 'tab-active' : ''}`}

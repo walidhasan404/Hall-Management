@@ -11,10 +11,11 @@ const Banner = ({ title, description, buttonText, onSubmit }) => {
     };
 
     return (
-        <div className="slider-banner">
+        <div className="slider-banner mx-4 lg:mx-8">
             <SectionTitle
                 heading="Welcome to our dining"
             />
+            <img src="https://i.ibb.co/dLZFQRZ/project1.webp" alt="HallImage" className="w-full h-48 lg:h-96 rounded-lg object-cover mb-4" />
             <p className="text-center m-4">
             Muktijoddha Hall, is a student dormitory at Sylhet Engineering College. It provides residential facilities for a large number of students, fostering a sense of community and supporting their academic pursuits.
             </p>

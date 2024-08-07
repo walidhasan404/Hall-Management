@@ -22,12 +22,12 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                Swal.fire({
+                // console.log(user);
+                Swal.fire({ 
                     title: 'User Login Successful.',
                     showClass: {
                         popup: 'animate__animated animate__fadeInDown'
@@ -50,7 +50,7 @@ const Login = () => {
         }
     }
     return (
-        <div>
+        <div className='p-8'>
             <Helmet>
                 <title>Muktijoddha Hall | Login</title>
             </Helmet>
@@ -83,9 +83,9 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input disabled={false} className="btn btn-primary" type="submit" value="Login" />
                             </div>
+                            <SocialLogin></SocialLogin>
                         </form>
                         <p className="m-2"><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
-                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>

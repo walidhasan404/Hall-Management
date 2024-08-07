@@ -7,7 +7,7 @@ import { axiosSecure } from "../../hooks/useAxiosSecure";
 import Swal from 'sweetalert2';
 import { useNavigate, useLocation } from 'react-router-dom';
 import useAdmin from "../../hooks/useAdmin";
-import axios from "axios";
+import useRequest from "../../hooks/useRequest";
 
 const MealDetails = () => {
     const meal = useLoaderData();
@@ -19,6 +19,7 @@ const MealDetails = () => {
     const [likes, setLikes] = useState(Array.isArray(meal.likes) ? meal.likes : []);
     const [isLiked, setIsLiked] = useState(user ? likes.includes(user.email) : false);
     const [isAdmin, isAdminLoading] = useAdmin();
+    const [request, refetch] = useRequest();
 
     const fetchMealData = async () => {
         try {
@@ -171,24 +172,13 @@ const MealDetails = () => {
                 setLikes(updatedLikes);
                 setIsLiked(!isLiked);
 
-                if (updatedLikes.length >= 10) {
-                    await axios.post(`https://muktijoddha-hall-server.vercel.app/premium`, { mealId: meal._id });
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Meal moved to upcoming meals!',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                } else {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: isLiked ? 'warning' : 'success',
-                        title: isLiked ? 'Unliked' : 'Liked!',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                }
+                Swal.fire({
+                    position: 'top-end',
+                    icon: isLiked ? 'warning' : 'success',
+                    title: isLiked ? 'Unliked' : 'Liked!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             } else {
                 console.error('Error updating likes:', response.data.error);
                 Swal.fire({

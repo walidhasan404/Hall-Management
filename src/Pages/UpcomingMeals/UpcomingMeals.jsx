@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useEffect, useState } from "react";
-import MealsCard from "../Home/Category/MealsCard";
+import MealsCard from "./MealsCard";
+
 
 const UpcomingMeals = () => {
 

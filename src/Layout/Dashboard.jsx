@@ -6,92 +6,111 @@ import { MdPayments, MdRateReview, MdReviews } from "react-icons/md";
 import { ImProfile } from "react-icons/im";
 import useAdmin from "../hooks/useAdmin";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 
 const Dashboard = () => {
-
     const [isAdmin] = useAdmin();
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
             <Helmet>
                 <title>Muktijoddha Hall | Dashboard</title>
             </Helmet>
             {/* dashboard side bar */}
-            <div className="w-64 min-h-screen bg-lime-400">
+            <div className={`w-full md:w-64 bg-lime-400 min-h-screen ${isSidebarOpen ? 'block' : 'hidden'} md:block`}>
                 <ul className="menu p-4">
                     {
                         isAdmin ?
                             <>
                                 <li>
                                     <NavLink to="/dashboard/adminProfile">
-                                        <ImProfile></ImProfile>
-                                        Admin Profile</NavLink>
+                                        <ImProfile />
+                                        Admin Profile
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/users">
-                                        <FaUsers></FaUsers>
-                                        Manage Users</NavLink>
+                                        <FaUsers />
+                                        Manage Users
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/addMeals">
-                                        <FaUtensils></FaUtensils>
-                                        Add Meals</NavLink>
+                                        <FaUtensils />
+                                        Add Meals
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/allAddMeals">
-                                        <GiHotMeal/>
-                                        My Added Meals</NavLink>
+                                        <GiHotMeal />
+                                        My Added Meals
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/allReviews">
-                                        <MdRateReview></MdRateReview>
-                                        All Reviews</NavLink>
+                                        <MdRateReview />
+                                        All Reviews
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/allRequest">
-                                        <FaAd></FaAd>
-                                        All Requests</NavLink>
+                                        <FaAd />
+                                        All Requests
+                                    </NavLink>
                                 </li>
                             </>
                             : <>
                                 <li>
                                     <NavLink to="/dashboard/myProfile">
                                         <CgProfile />
-                                        My Profile</NavLink>
+                                        My Profile
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/request">
-                                        <GiMeal></GiMeal>
-                                        Requested Meals</NavLink>
+                                        <GiMeal />
+                                        Requested Meals
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/myReviews">
-                                        <MdReviews></MdReviews>
-                                        My Reviews</NavLink>
+                                        <MdReviews />
+                                        My Reviews
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/history">
-                                        <MdPayments></MdPayments>
-                                        Payment History</NavLink>
+                                        <MdPayments />
+                                        Payment History
+                                    </NavLink>
                                 </li>
                             </>
                     }
                     <div className="divider"></div>
                     <li>
                         <NavLink to="/">
-                            <FaHome></FaHome>
-                            Home</NavLink>
+                            <FaHome />
+                            Home
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink to="/dashboard/contact">
-                            <FaEnvelope></FaEnvelope>
-                            Contact</NavLink>
+                            <FaEnvelope />
+                            Contact
+                        </NavLink>
                     </li>
                 </ul>
             </div>
             {/* dashboard content */}
-            <div className="flex-1 p-8">
-                <Outlet></Outlet>
+            <div className="flex-1 p-4 md:p-8">
+                <button
+                    className="md:hidden p-2 bg-lime-400 rounded-full"
+                    onClick={() => setSidebarOpen(!isSidebarOpen)}
+                >
+                    {isSidebarOpen ? 'Close Menu' : 'Open Menu'}
+                </button>
+                <Outlet />
             </div>
         </div>
     );
