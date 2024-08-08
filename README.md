@@ -1,6 +1,6 @@
 # Hostel Management System Website
 
-Welcome to the Hostel Management System (HMS) website! This platform is designed to streamline hostel operations and enhance the living experience for both administrators and residents.
+Welcome to the Hostel Management System (HMS) website! This website efficiently handles student's dining section. The dining manager is the admin of the website and can add meals, handle users and also can handle their interaction. Students can request food, share feedback, like and review different meals, make payments for their requested food, and get served the food. Manager and students have different dashboards and they can handle their information individually.
 
 ## Admin Credentials
 - **Email:** walid@khalid23.com
