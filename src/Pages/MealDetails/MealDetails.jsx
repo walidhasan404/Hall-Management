@@ -2,14 +2,14 @@ import { useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BiDish, BiLike } from "react-icons/bi";
 import ReactStars from 'react-rating-stars-component';
+import { motion } from 'framer-motion';
 import useAuth from "../../hooks/useAuth";
 import { axiosSecure } from "../../hooks/useAxiosSecure";
 import Swal from 'sweetalert2';
 import { useNavigate, useLocation } from 'react-router-dom';
 import useAdmin from "../../hooks/useAdmin";
-import useRequest from "../../hooks/useRequest";
 
-const MealDetails = () => {
+const MealDetails = ({ item }) => {
     const meal = useLoaderData();
     const { user } = useAuth();
     const navigate = useNavigate();
@@ -18,8 +18,7 @@ const MealDetails = () => {
     const [reviews, setReviews] = useState(meal.reviews || []);
     const [likes, setLikes] = useState(Array.isArray(meal.likes) ? meal.likes : []);
     const [isLiked, setIsLiked] = useState(user ? likes.includes(user.email) : false);
-    const [isAdmin, isAdminLoading] = useAdmin();
-    const [request, refetch] = useRequest();
+    const [isAdmin] = useAdmin();
 
     const fetchMealData = async () => {
         try {
@@ -34,7 +33,7 @@ const MealDetails = () => {
 
     useEffect(() => {
         fetchMealData();
-    }, []);
+    }, [user]);
 
     const handleRequestedMeal = () => {
         if (user && user.email) {
@@ -197,14 +196,51 @@ const MealDetails = () => {
         }
     };
 
-
     return (
-        <div className="mx-2 p-2">
-            <h3 className="my-4 text-2xl text-center font-bold">Meal Details</h3>
-            <h3 className="text-center text-base font-medium my-4">{meal.title}</h3>
-            <img className="mb-4 w-96 mx-auto" src={meal.image} alt={meal.title} />
-            <p className="text-center mt-2">{meal.description}</p>
-            <div className="p-4 text-center">
+        <motion.div 
+            className="mx-2 p-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+            <motion.h3 
+                className="my-4 text-2xl text-center font-bold"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+                Meal Details
+            </motion.h3>
+            <motion.h3 
+                className="text-center text-base font-medium my-4"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+                {meal.title}
+            </motion.h3>
+            <motion.img 
+                className="mb-4 w-96 h-96 mx-auto"
+                src={meal.image}
+                alt={meal.title}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+            />
+            <motion.p 
+                className="text-center mt-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+            >
+                {meal.description}
+            </motion.p>
+            <motion.div 
+                className="p-4 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+            >
                 <p className="text-base my-2 font-medium">Category : <span className="text-sm font-normal">{meal.category}</span></p>
                 <p className="text-base my-2 font-medium">Price : <span className="text-sm font-normal">${meal.price}</span></p>
                 <p className="text-base my-2 font-medium">Admin : <span className="text-sm font-normal">{meal.admin}</span></p>
@@ -223,27 +259,70 @@ const MealDetails = () => {
                         />
                     </div>
                 </div>
-            </div>
-            <p className="text-center"><span className="font-medium text-lg">Likes: {likes.length}</span></p>
-            <div className="flex justify-center gap-4 my-4">
+            </motion.div>
+            <motion.p 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+            >
+                <span className="font-medium text-lg">Likes: {likes.length}</span>
+            </motion.p>
+            <motion.div 
+                className="flex justify-center gap-4 my-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+            >
                 {!isAdmin && (
                     <>
-                        <button onClick={handleRequestedMeal} className="btn btn-secondary"><BiDish /> Request Meal</button>
-                        <button onClick={handleLike} className={`btn ${isLiked ? 'btn-danger' : 'btn-primary'}`}><BiLike /> {isLiked ? 'Unlike' : 'Like'}</button>
+                        <motion.button 
+                            onClick={handleRequestedMeal} 
+                            className="btn btn-secondary"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <BiDish /> Request Meal
+                        </motion.button>
+                        <motion.button 
+                            onClick={handleLike} 
+                            className={`btn ${isLiked ? 'btn-danger' : 'btn-primary'}`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <BiLike /> {isLiked ? 'Unlike' : 'Like'}
+                        </motion.button>
                     </>
                 )}
-            </div>
-            <div className="p-4">
+            </motion.div>
+            <motion.div 
+                className="p-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+            >
                 <h4 className="text-xl font-bold mb-2">Reviews</h4>
                 {reviews.length > 0 ? (
                     reviews.map((review, index) => (
-                        <div key={index} className="border p-2 my-2">
+                        <motion.div 
+                            key={index} 
+                            className="border p-2 my-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
                             <p><strong>{review.user}:</strong> {review.comment}</p>
                             <p><strong>Rating:</strong> {review.rating}</p>
-                        </div>
+                        </motion.div>
                     ))
                 ) : (
-                    <p>No reviews yet.</p>
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        No reviews yet.
+                    </motion.p>
                 )}
                 {!isAdmin && (
                     <div className="mt-4">
@@ -264,14 +343,20 @@ const MealDetails = () => {
                                     onChange={(newRating) => setNewReview({ ...newReview, rating: newRating })}
                                 />
                             </span>
-                            <button onClick={handleReviewSubmit} className="btn btn-primary ml-2">Submit Review</button>
+                            <motion.button 
+                                onClick={handleReviewSubmit} 
+                                className="btn btn-primary ml-2"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                Submit Review
+                            </motion.button>
                         </div>
                     </div>
                 )}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 
 export default MealDetails;
-

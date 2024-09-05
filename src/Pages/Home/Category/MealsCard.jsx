@@ -4,7 +4,7 @@ import ReactStars from 'react-rating-stars-component';
 
 const MealsCard = ({ meal }) => {
     return (
-        <div className="card lg:w-96 h-full w-full bg-orange-50 shadow-xl">
+        <div className="card lg:w-96 h-full w-full bg-white bordered">
             <figure className="px-10 pt-10">
                 <img src={meal.image} alt={meal.title} className="h-60 w-60 rounded-xl" />
             </figure>

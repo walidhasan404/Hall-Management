@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "firebase": "^10.12.2",
+    "framer-motion": "^11.3.31",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "mongoose": "^8.4.1",

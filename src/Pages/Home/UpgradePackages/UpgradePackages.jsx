@@ -33,7 +33,7 @@ const UpgradePackages = () => {
             <SectionTitle heading="Upgrade to Premium" />
             <div className="flex justify-around flex-col gap-3 lg:flex-row">
                 {packages.map((pkg) => (
-                    <div key={pkg.name} className="max-w-sm rounded overflow-hidden shadow-lg w-full bg-blue-50 p-6">
+                    <div key={pkg.name} className="max-w-sm overflow-hidden w-full bg-blue-50 py-6">
                         <div className="text-center mb-4">
                             <img src={pkg.image} alt={`${pkg.name} package`} className="w-60 h-60 mx-auto object-cover mb-4 rounded" />
                             <h3 className="text-xl font-semibold">{pkg.name}</h3>

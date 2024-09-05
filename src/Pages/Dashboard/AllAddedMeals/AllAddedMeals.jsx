@@ -67,7 +67,7 @@ const AllAddedMeals = () => {
                     {currentMeals.map((meal) => (
                         <tr key={meal._id}>
                             <td className="py-2 px-4 border-b">{meal.title}</td>
-                            <td className="py-2 px-4 border-b">{meal.likes}</td>
+                            <td className="py-2 px-4 border-b">{meal.likes.length}</td>
                             <td className="py-2 px-4 border-b">
                                 <ul>
                                     {Array.isArray(meal.reviews) ? meal.reviews.map((review, index) => (

@@ -13,103 +13,113 @@ const Dashboard = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row min-h-screen">
             <Helmet>
                 <title>Muktijoddha Hall | Dashboard</title>
             </Helmet>
-            {/* dashboard side bar */}
-            <div className={`w-full md:w-64 bg-lime-400 min-h-screen ${isSidebarOpen ? 'block' : 'hidden'} md:block`}>
-                <ul className="menu p-4">
-                    {
-                        isAdmin ?
-                            <>
-                                <li>
-                                    <NavLink to="/dashboard/adminProfile">
-                                        <ImProfile />
-                                        Admin Profile
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/users">
-                                        <FaUsers />
-                                        Manage Users
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/addMeals">
-                                        <FaUtensils />
-                                        Add Meals
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/allAddMeals">
-                                        <GiHotMeal />
-                                        My Added Meals
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/allReviews">
-                                        <MdRateReview />
-                                        All Reviews
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/allRequest">
-                                        <FaAd />
-                                        All Requests
-                                    </NavLink>
-                                </li>
-                            </>
-                            : <>
-                                <li>
-                                    <NavLink to="/dashboard/myProfile">
-                                        <CgProfile />
-                                        My Profile
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/request">
-                                        <GiMeal />
-                                        Requested Meals
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/myReviews">
-                                        <MdReviews />
-                                        My Reviews
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/history">
-                                        <MdPayments />
-                                        Payment History
-                                    </NavLink>
-                                </li>
-                            </>
-                    }
+
+            {/* Toggle Sidebar Button for smaller screens */}
+            <div className="md:hidden p-4 flex justify-end bg-lime-400">
+                <button
+                    className="text-black font-medium btn"
+                    onClick={() => setSidebarOpen(!isSidebarOpen)}
+                >
+                    {isSidebarOpen ? 'Close Menu' : 'Open Menu'}
+                </button>
+            </div>
+
+            {/* Sidebar */}
+            <div
+                className={`bg-lime-400 p-4 absolute md:relative min-h-screen md:min-h-0 transition-transform transform ${
+                    isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+                } md:translate-x-0 w-64 md:w-64 z-10`}
+            >
+                <ul className="menu p-4 space-y-4">
+                    {isAdmin ? (
+                        <>
+                            <li>
+                                <NavLink to="/dashboard/adminProfile" className="flex items-center">
+                                    <ImProfile className="mr-1" />
+                                    Admin Profile
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/users" className="flex items-center">
+                                    <FaUsers className="mr-1" />
+                                    Manage Users
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/addMeals" className="flex items-center">
+                                    <FaUtensils className="mr-1" />
+                                    Add Meals
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/allAddMeals" className="flex items-center">
+                                    <GiHotMeal className="mr-1" />
+                                    My Added Meals
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/allReviews" className="flex items-center">
+                                    <MdRateReview className="mr-1" />
+                                    All Reviews
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/allRequest" className="flex items-center">
+                                    <FaAd className="mr-1" />
+                                    All Requests
+                                </NavLink>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li>
+                                <NavLink to="/dashboard/myProfile" className="flex items-center">
+                                    <CgProfile className="mr-1" />
+                                    My Profile
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/request" className="flex items-center">
+                                    <GiMeal className="mr-1" />
+                                    Requested Meals
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/myReviews" className="flex items-center">
+                                    <MdReviews className="mr-1" />
+                                    My Reviews
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/history" className="flex items-center">
+                                    <MdPayments className="mr-1" />
+                                    Payment History
+                                </NavLink>
+                            </li>
+                        </>
+                    )}
                     <div className="divider"></div>
                     <li>
-                        <NavLink to="/">
-                            <FaHome />
+                        <NavLink to="/" className="flex items-center">
+                            <FaHome className="mr-1" />
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/dashboard/contact">
-                            <FaEnvelope />
+                        <NavLink to="/dashboard/contact" className="flex items-center">
+                            <FaEnvelope className="mr-1" />
                             Contact
                         </NavLink>
                     </li>
                 </ul>
             </div>
-            {/* dashboard content */}
+
+            {/* Dashboard Content */}
             <div className="flex-1 p-4 md:p-8">
-                <button
-                    className="md:hidden p-2 bg-lime-400 rounded-full"
-                    onClick={() => setSidebarOpen(!isSidebarOpen)}
-                >
-                    {isSidebarOpen ? 'Close Menu' : 'Open Menu'}
-                </button>
                 <Outlet />
             </div>
         </div>
